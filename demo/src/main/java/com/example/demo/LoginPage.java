@@ -25,5 +25,8 @@ public class LoginPage {
     public void GotoSignUpPage(ActionEvent actionEvent) {
         System.out.println("ana hena");
     }
+
+    public void SignInTheUser(ActionEvent actionEvent) {
+    }
 }
 
