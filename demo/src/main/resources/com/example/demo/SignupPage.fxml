@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox alignment="CENTER" maxHeight="450.0" maxWidth="720.0" minHeight="450.0" minWidth="720.0" prefHeight="450.0" prefWidth="720.0" style="-fx-background-color: #fceee3;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPage">
+<HBox alignment="CENTER" maxHeight="450.0" maxWidth="720.0" minHeight="450.0" minWidth="720.0" prefHeight="450.0" prefWidth="720.0" style="-fx-background-color: #FFD9BA;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPage">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="450.0" prefWidth="488.0">
          <children>
