@@ -7,8 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="720.0" style="-fx-background-color: #FFD7B6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="720.0" style="-fx-background-color: #FFD7B6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.StudentList">
    <children>
       <TableView layoutX="340.0" layoutY="22.0" prefHeight="406.0" prefWidth="358.0" style="-fx-background-color: #DB8E78;">
         <columns>
@@ -22,5 +21,6 @@
       <TextField fx:id="IDfield" layoutX="79.0" layoutY="296.0" />
       <Label layoutX="82.0" layoutY="180.0" text="Name" />
       <Label layoutX="82.0" layoutY="270.0" text="ID" />
+      <Button layoutX="22.0" layoutY="403.0" mnemonicParsing="false" onAction="#Back" text="Back" />
    </children>
 </AnchorPane>

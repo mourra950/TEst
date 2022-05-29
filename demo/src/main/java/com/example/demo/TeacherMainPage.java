@@ -33,12 +33,12 @@ public class TeacherMainPage {
 
     @FXML
     void GotoList(ActionEvent event) throws IOException {
-//        FXMLLoader fxmlLoader = new FXMLLoader(SignupPage.class.getResource("StudentList.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load());
-//        Stage stage = (Stage) b.getScene().getWindow();
-//        stage.setTitle("Login");
-//        stage.setScene(scene);
-//        stage.show();
+        FXMLLoader fxmlLoader = new FXMLLoader(SignupPage.class.getResource("StudentList.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) b.getScene().getWindow();
+        stage.setTitle("Login");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

@@ -208,7 +208,7 @@
                                     <Insets left="30.0" />
                                  </HBox.margin>
                               </Button>
-                              <TextField prefHeight="25.0" prefWidth="498.0">
+                              <TextField fx:id="Q3field" prefHeight="25.0" prefWidth="498.0">
                                  <HBox.margin>
                                     <Insets left="30.0" />
                                  </HBox.margin>
