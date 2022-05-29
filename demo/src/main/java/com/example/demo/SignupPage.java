@@ -39,7 +39,7 @@ public class SignupPage {
     void BackToMain(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SignupPage.class.getResource("LoginPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = new Stage();
+        Stage stage = (Stage) Phone.getScene().getWindow();
         stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();

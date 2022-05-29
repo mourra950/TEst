@@ -1,14 +1,18 @@
 package com.example.demo;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class TeacherPage {
 
@@ -85,7 +89,14 @@ public class TeacherPage {
     private TextField S3field;
 
     @FXML
-    void BackToStudentPage(ActionEvent event) {
+    void BackToStudentPage(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(SignupPage.class.getResource("TeacherMainPage.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) S3field.getScene().getWindow();
+        stage.setTitle("Login");
+        stage.setScene(scene);
+        stage.show();
+
 
     }
 

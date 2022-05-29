@@ -14,12 +14,12 @@
             <Image url="@../../../giphy.gif" />
          </image>
       </ImageView>
-      <Button layoutX="122.0" layoutY="120.0" mnemonicParsing="false" text="Course Page">
+      <Button fx:id="b" layoutX="122.0" layoutY="120.0" mnemonicParsing="false" onAction="#GotoCourse" text="Course Page">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="504.0" layoutY="120.0" mnemonicParsing="false" text="Student List">
+      <Button layoutX="504.0" layoutY="120.0" mnemonicParsing="false" onAction="#GotoList" text="Student List">
          <font>
             <Font size="15.0" />
          </font>
