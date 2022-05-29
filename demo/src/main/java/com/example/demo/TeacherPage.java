@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -89,53 +90,63 @@ public class TeacherPage {
     }
 
     @FXML
-    void UploadDes(ActionEvent event) {
-
+    void UploadDes(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String sql="UPDATE 'main'.'Description' SET 'Description' ="+DescriptionLabel.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        test_db.UpdateData(sql);
     }
 
     @FXML
-    void UploadL1(ActionEvent event) {
-
+    void UploadL1(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String sql="UPDATE 'main'.'lectures' SET 'L1' ="+L1field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        test_db.UpdateData(sql);
     }
 
     @FXML
-    void UploadL2(ActionEvent event) {
-
+    void UploadL2(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String sql="UPDATE 'main'.'lectures' SET 'L2' ="+L2field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        test_db.UpdateData(sql);
     }
 
     @FXML
-    void UploadL3(ActionEvent event) {
-
+    void UploadL3(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String sql="UPDATE 'main'.'lectures' SET 'L3' ="+L3field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        test_db.UpdateData(sql);
     }
 
     @FXML
-    void UploadQ1(ActionEvent event) {
-
+    void UploadQ1(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String sql="UPDATE 'main'.'Quizes' SET 'Q1' ="+Q1field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        test_db.UpdateData(sql);
     }
 
     @FXML
-    void UploadQ2(ActionEvent event) {
-
+    void UploadQ2(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String sql="UPDATE 'main'.'Quizes' SET 'Q2' ="+Q2field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        test_db.UpdateData(sql);
     }
 
     @FXML
-    void UploadQ3(ActionEvent event) {
-
+    void UploadQ3(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String sql="UPDATE 'main'.'Quizes' SET 'Q3' ="+Q3field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        test_db.UpdateData(sql);
     }
 
     @FXML
-    void UploadS1(ActionEvent event) {
-
+    void UploadS1(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String sql="UPDATE 'main'.'Assignments' SET 'S1' ="+S1field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        test_db.UpdateData(sql);
     }
 
     @FXML
-    void UploadS2(ActionEvent event) {
-
+    void UploadS2(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String sql="UPDATE 'main'.'Assignments' SET 'S2' ="+S2field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        test_db.UpdateData(sql);
     }
 
     @FXML
-    void UploadS3(ActionEvent event) {
-        String sql="UPDATE 'main'.'lectures' SET 'S3' ="+S3field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+    void UploadS3(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String sql="UPDATE 'main'.'Assignments' SET 'S3' ="+S3field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        test_db.UpdateData(sql);
     }
 
     @FXML
