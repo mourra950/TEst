@@ -64,47 +64,48 @@ public class TeacherPage {
 
     @FXML
     void UploadL1(ActionEvent event) {
+        String sql="UPDATE 'main'.'lectures' SET 'L1' ="+"''"+" WHERE (`Name` == '" + "DB" + "');";
 
     }
 
     @FXML
     void UploadL2(ActionEvent event) {
-
+        String sql="UPDATE 'main'.'lectures' SET 'L1' ="+"''"+" WHERE (`Name` == '" + "DB" + "');";
     }
 
     @FXML
     void UploadL3(ActionEvent event) {
-
+        String sql="UPDATE 'main'.'lectures' SET 'L1' ="+"''"+" WHERE (`Name` == '" + "DB" + "');";
     }
 
     @FXML
     void UploadQ1(ActionEvent event) {
-
+        String sql="UPDATE 'main'.'lectures' SET 'L1' ="+"''"+" WHERE (`Name` == '" + "DB" + "');";
     }
 
     @FXML
     void UploadQ2(ActionEvent event) {
-
+        String sql="UPDATE 'main'.'lectures' SET 'L1' ="+"''"+" WHERE (`Name` == '" + "DB" + "');";
     }
 
     @FXML
     void UploadQ3(ActionEvent event) {
-
+        String sql="UPDATE 'main'.'lectures' SET 'L1' ="+"''"+" WHERE (`Name` == '" + "DB" + "');";
     }
 
     @FXML
     void UploadS1(ActionEvent event) {
-
+        String sql="UPDATE 'main'.'lectures' SET 'L1' ="+"''"+" WHERE (`Name` == '" + "DB" + "');";
     }
 
     @FXML
     void UploadS2(ActionEvent event) {
-
+        String sql="UPDATE 'main'.'lectures' SET 'L1' ="+"''"+" WHERE (`Name` == '" + "DB" + "');";
     }
 
     @FXML
     void UploadS3(ActionEvent event) {
-
+        String sql="UPDATE 'main'.'lectures' SET 'L1' ="+"''"+" WHERE (`Name` == '" + "DB" + "');";
     }
 
     @FXML
