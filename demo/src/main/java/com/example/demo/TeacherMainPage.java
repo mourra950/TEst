@@ -10,6 +10,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class TeacherMainPage {
@@ -20,7 +22,8 @@ public class TeacherMainPage {
 
     @FXML
     private URL location;
-
+    @FXML
+    private ImageView cat;
     @FXML
     void GotoCourse(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SignupPage.class.getResource("TeacherPage.fxml"));
@@ -50,6 +53,19 @@ public class TeacherMainPage {
         stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();
+
+    }
+    @FXML
+    void swap(MouseEvent event) {
+        if(event.getSource()==b)
+        {
+
+            cat.setScaleX(1);
+
+        }
+        else {
+            cat.setScaleX(-1);
+        }
 
     }
 

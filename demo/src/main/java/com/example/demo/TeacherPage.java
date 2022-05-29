@@ -105,64 +105,64 @@ public class TeacherPage {
 
 
     }
-
+ String temppp="DB";
     @FXML
     void UploadDes(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE 'main'.'Description' SET 'Description' =" + DescriptionLabel.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Description' SET 'Description' ='" + DescriptionLabel.getText() + "' WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadL1(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE 'main'.'lectures' SET 'L1' =" + L1field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'lectures' SET 'L1' ='" + L1field.getText() + "' WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadL2(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE 'main'.'lectures' SET 'L2' =" + L2field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'lectures' SET 'L2' ='" + L2field.getText() + "' WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadL3(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE 'main'.'lectures' SET 'L3' =" + L3field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'lectures' SET 'L3' ='" + L3field.getText() + "' WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadQ1(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE 'main'.'Quizes' SET 'Q1' =" + Q1field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Quizes' SET 'Q1' ='" + Q1field.getText() + "' WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadQ2(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE 'main'.'Quizes' SET 'Q2' =" + Q2field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Quizes' SET 'Q2' ='" + Q2field.getText() + "' WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadQ3(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE 'main'.'Quizes' SET 'Q3' =" + Q3field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Quizes' SET 'Q3' ='" + Q3field.getText() + "' WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadS1(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE 'main'.'Assignments' SET 'S1' =" + S1field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Assignments' SET 'S1' ='" + S1field.getText() + "' WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadS2(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE 'main'.'Assignments' SET 'S2' =" + S2field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Assignments' SET 'S2' ='" + S2field.getText() + "' WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadS3(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE 'main'.'Assignments' SET 'S3' =" + S3field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Assignments' SET 'S3' ='" + S3field.getText() + "' WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
@@ -232,13 +232,15 @@ public class TeacherPage {
         PreparedStatement ps = null;
         ResultSet rs = null;
         String temp = null;
-        String sql = "SELECT * FROM 'main'.'" + b + "' WHERE Name = '" + LoginPage.CourseName + "'";
+        String ctemp="DB";
+        String sql = "SELECT * FROM 'main'.'" + b + "' WHERE Name = '" + ctemp + "'";
         ps = con.prepareStatement(sql);
         rs = ps.executeQuery();
         while (rs.next()) {
             temp = rs.getString(c);
 
         }
+        System.out.println(temp);
         return temp;
     }
 

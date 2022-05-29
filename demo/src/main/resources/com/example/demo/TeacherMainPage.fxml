@@ -9,17 +9,17 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="720.0" style="-fx-background-color: #FFD7B6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TeacherMainPage">
    <children>
-      <ImageView fitHeight="297.0" fitWidth="307.0" layoutX="216.0" layoutY="151.0">
+      <ImageView fx:id="cat" fitHeight="297.0" fitWidth="307.0" layoutX="216.0" layoutY="151.0">
          <image>
             <Image url="@../../../giphy.gif" />
          </image>
       </ImageView>
-      <Button fx:id="b" layoutX="122.0" layoutY="120.0" mnemonicParsing="false" onAction="#GotoCourse" text="Course Page">
+      <Button fx:id="b" layoutX="122.0" layoutY="120.0" mnemonicParsing="false" onAction="#GotoCourse" onMouseEntered="#swap" text="Course Page">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="504.0" layoutY="120.0" mnemonicParsing="false" onAction="#GotoList" text="Student List">
+      <Button layoutX="504.0" layoutY="120.0" mnemonicParsing="false" onAction="#GotoList" onMouseEntered="#swap" text="Student List">
          <font>
             <Font size="15.0" />
          </font>
