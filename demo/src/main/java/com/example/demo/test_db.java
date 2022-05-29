@@ -8,13 +8,14 @@ import java.sql.Statement;
 public class test_db
 {
    public static void main(String[] args) throws SQLException, ClassNotFoundException {
-      UpdateData();
+
    }
-   public static void UpdateData() throws SQLException, ClassNotFoundException { // function to update table
+   public static void UpdateData(String sql ) throws SQLException, ClassNotFoundException { // function to update table
 
       PreparedStatement ps = null;
       try{                              //(anhy lec=rakam kam)         course=
-         String sql="UPDATE 'main'.'lectures' SET 'L1' ="+"'ana hena'"+" WHERE (`Name` == '" + "DB" + "');";
+         //String sql="UPDATE 'main'.'lectures' SET 'L1' ="+"'ana hena'"+" WHERE (`Name` == '" + "DB" + "');";
+
          DBconnector.connect(sql);
          System.out.println("the table is updated successfully");
       }

@@ -28,7 +28,7 @@ public class LoginPage {
 
     @FXML
     private TextField Email;
-
+    public static String CourseName;
 
     public void GotoSignUpPage(ActionEvent actionEvent) throws IOException {
 
@@ -55,6 +55,8 @@ public class LoginPage {
                 rs = ps.executeQuery();
                 while (rs.next())
                 {   admin= rs.getString("admin");
+                    CourseName=rs.getString("Course");
+
                     found=true;
                 }
                 if(found)
