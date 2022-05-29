@@ -3,18 +3,19 @@ package com.example.demo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class test_db
 {
+   public static void main(String[] args) throws SQLException, ClassNotFoundException {
+      UpdateData();
+   }
    public static void UpdateData() throws SQLException, ClassNotFoundException { // function to update table
-      Connection con =DBconnector.connect();
+
       PreparedStatement ps = null;
-      try{
-         String sql="UPDATE lectures set L1 = ? WHERE Name = ? ";
-         ps=con.prepareStatement(sql);
-         ps.setString(1,"https://lms.eng.asu.edu.eg/pluginfile.php/442500/mod_resource/content/1/DB-Lect2.pdf");
-         ps.setString(2,"DB");
-         ps.execute();
+      try{                              //(anhy lec=rakam kam)         course=
+         String sql="UPDATE 'main'.'lectures' SET 'L1' ="+"'ana hena'"+" WHERE (`Name` == '" + "DB" + "');";
+         DBconnector.connect(sql);
          System.out.println("the table is updated successfully");
       }
       catch(SQLException e)
