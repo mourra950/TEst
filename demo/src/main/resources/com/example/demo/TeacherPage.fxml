@@ -69,7 +69,7 @@
                               </TextField>
                            </children>
                         </HBox>
-                        <Button fx:id="L1" mnemonicParsing="false" text="Lecture 1">
+                        <Button fx:id="L1" mnemonicParsing="false" onAction="#OL1" text="Lecture 1">
                            <VBox.margin>
                               <Insets bottom="30.0" top="30.0" />
                            </VBox.margin>
@@ -88,7 +88,7 @@
                               </TextField>
                            </children>
                         </HBox>
-                        <Button fx:id="L2" mnemonicParsing="false" text="Lecture 2">
+                        <Button fx:id="L2" mnemonicParsing="false" onAction="#OL2" text="Lecture 2">
                            <VBox.margin>
                               <Insets bottom="30.0" top="30.0" />
                            </VBox.margin>
@@ -107,7 +107,7 @@
                               </TextField>
                            </children>
                         </HBox>
-                        <Button fx:id="L3" mnemonicParsing="false" text="Lecture 3">
+                        <Button fx:id="L3" mnemonicParsing="false" onAction="#OL3" text="Lecture 3">
                            <VBox.margin>
                               <Insets bottom="30.0" top="30.0" />
                            </VBox.margin>
@@ -133,7 +133,7 @@
                               </TextField>
                            </children>
                         </HBox>
-                        <Button fx:id="L11" mnemonicParsing="false" text="Assignment 1" />
+                        <Button fx:id="L11" mnemonicParsing="false" onAction="#OA1" text="Assignment 1" />
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Button mnemonicParsing="false" onAction="#UploadS2" text="Upload">
@@ -148,7 +148,7 @@
                               </TextField>
                            </children>
                         </HBox>
-                        <Button fx:id="L21" mnemonicParsing="false" text="Assignment 2" />
+                        <Button fx:id="L21" mnemonicParsing="false" onAction="#OA2" text="Assignment 2" />
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Button mnemonicParsing="false" onAction="#UploadS3" text="Upload">
@@ -163,7 +163,7 @@
                               </TextField>
                            </children>
                         </HBox>
-                        <Button fx:id="L31" mnemonicParsing="false" text="Assignment 3" />
+                        <Button fx:id="L31" mnemonicParsing="false" onAction="#OA3" text="Assignment 3" />
                      </children></VBox>
               </content>
             </Tab>
@@ -185,7 +185,7 @@
                               </TextField>
                            </children>
                         </HBox>
-                        <Button fx:id="L111" mnemonicParsing="false" text="Quiz 1" />
+                        <Button fx:id="L111" mnemonicParsing="false" onAction="#OQ1" text="Quiz 1" />
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Button mnemonicParsing="false" onAction="#UploadQ2" text="Upload">
@@ -200,7 +200,7 @@
                               </TextField>
                            </children>
                         </HBox>
-                        <Button fx:id="L211" mnemonicParsing="false" text="Quiz 2" />
+                        <Button fx:id="L211" mnemonicParsing="false" onAction="#OQ2" text="Quiz 2" />
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Button mnemonicParsing="false" onAction="#UploadQ3" text="Upload">
@@ -215,7 +215,7 @@
                               </TextField>
                            </children>
                         </HBox>
-                        <Button fx:id="L311" mnemonicParsing="false" text="Quiz 3" />
+                        <Button fx:id="L311" mnemonicParsing="false" onAction="#OQ3" text="Quiz 3" />
                      </children></VBox>
               </content>
             </Tab>

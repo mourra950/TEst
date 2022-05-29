@@ -2,8 +2,12 @@ package com.example.demo;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -36,13 +40,15 @@ public class TeacherPage {
 
     @FXML
     private Button L1;
+//lecture
 
     @FXML
-    private Button L11;
 
+    private Button L11;
+    //sheets
     @FXML
     private Button L111;
-
+    //quizes
     @FXML
     private TextField L1field;
 
@@ -102,68 +108,138 @@ public class TeacherPage {
 
     @FXML
     void UploadDes(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql="UPDATE 'main'.'Description' SET 'Description' ="+DescriptionLabel.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Description' SET 'Description' =" + DescriptionLabel.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadL1(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql="UPDATE 'main'.'lectures' SET 'L1' ="+L1field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'lectures' SET 'L1' =" + L1field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadL2(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql="UPDATE 'main'.'lectures' SET 'L2' ="+L2field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'lectures' SET 'L2' =" + L2field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadL3(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql="UPDATE 'main'.'lectures' SET 'L3' ="+L3field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'lectures' SET 'L3' =" + L3field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadQ1(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql="UPDATE 'main'.'Quizes' SET 'Q1' ="+Q1field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Quizes' SET 'Q1' =" + Q1field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadQ2(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql="UPDATE 'main'.'Quizes' SET 'Q2' ="+Q2field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Quizes' SET 'Q2' =" + Q2field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadQ3(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql="UPDATE 'main'.'Quizes' SET 'Q3' ="+Q3field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Quizes' SET 'Q3' =" + Q3field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadS1(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql="UPDATE 'main'.'Assignments' SET 'S1' ="+S1field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Assignments' SET 'S1' =" + S1field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadS2(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql="UPDATE 'main'.'Assignments' SET 'S2' ="+S2field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Assignments' SET 'S2' =" + S2field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
     @FXML
     void UploadS3(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql="UPDATE 'main'.'Assignments' SET 'S3' ="+S3field.getText()+" WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Assignments' SET 'S3' =" + S3field.getText() + " WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
+    }
+
+    @FXML
+    void OA1(ActionEvent event) throws Exception {
+    String link= getLink("Assignments","A1");
+        Browser.open(link);
+    }
+
+    @FXML
+    void OA2(ActionEvent event) throws Exception {
+        String link=getLink("Assignments","A2");
+        Browser.open(link);
+    }
+
+    @FXML
+    void OA3(ActionEvent event) throws Exception {
+        String link=getLink("Assignments","A3");
+        Browser.open(link);
+    }
+
+    @FXML
+    void OL1(ActionEvent event) throws Exception {
+        String link=getLink("lectures","L1");
+        Browser.open(link);
+    }
+
+    @FXML
+    void OL2(ActionEvent event) throws Exception {
+        String link=getLink("lectures","L2");
+        Browser.open(link);
+    }
+
+    @FXML
+    void OL3(ActionEvent event) throws Exception {
+        String link=getLink("lectures","L3");
+        Browser.open(link);
+    }
+
+    @FXML
+    void OQ1(ActionEvent event) throws Exception {
+        String link=getLink("Quizes","Q1");
+        Browser.open(link);
+    }
+
+    @FXML
+    void OQ2(ActionEvent event) throws Exception {
+        String link=getLink("Quizes","Q2");
+        Browser.open(link);
+    }
+
+    @FXML
+    void OQ3(ActionEvent event) throws Exception {
+        String link=getLink("Quizes","Q3");
+        Browser.open(link);
     }
 
     @FXML
     void initialize() {
 
 
+    }
+
+    public String getLink(String b, String c) throws SQLException, ClassNotFoundException {
+        //b anhy table , c anhy column
+        Connection con = DBconnector.connect();
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        String temp = null;
+        String sql = "SELECT * FROM 'main'.'" + b + "' WHERE Name = '" + LoginPage.CourseName + "'";
+        ps = con.prepareStatement(sql);
+        rs = ps.executeQuery();
+        while (rs.next()) {
+            temp = rs.getString(c);
+
+        }
+        return temp;
     }
 
 }

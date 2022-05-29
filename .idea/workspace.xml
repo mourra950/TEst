@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39272bf7-70c8-451f-9d0b-32a94173962d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Browser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/DB/lms.db" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/DB/lms.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/TeacherPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/TeacherPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/example/demo/TeacherPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/example/demo/TeacherPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,9 +87,19 @@
       <option name="presentableId" value="Default" />
       <updated>1653790893988</updated>
     </task>
+    <task id="LOCAL-00001" summary="updated the functions of database of lectures,assignments,quizes and adding database to description , connecting it">
+      <created>1653854333205</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653854333205</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="updated the functions of database of lectures,assignments,quizes and adding database to description , connecting it" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated the functions of database of lectures,assignments,quizes and adding database to description , connecting it" />
   </component>
 </project>
