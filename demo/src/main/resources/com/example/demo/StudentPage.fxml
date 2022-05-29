@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.StudentPage">
    <children>
       <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="720.0" style="-fx-background-color: #fceee3;">
         <columnConstraints>
@@ -27,12 +26,12 @@
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #fceee3;">
                <children>
-                  <Label text="Label">
+                  <Label text="Data Base">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefWidth="200.0" text="Button" textAlignment="CENTER">
+                  <Button fx:id="DB" alignment="CENTER" mnemonicParsing="false" onAction="#GotoCourse" prefWidth="200.0" text="Data Base" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
@@ -44,12 +43,12 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                <children>
-                  <Label text="Label">
+                  <Label text="Compilers">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefWidth="200.0" text="Button" textAlignment="CENTER">
+                  <Button fx:id="CP" alignment="CENTER" mnemonicParsing="false" onAction="#GotoCourse" prefWidth="200.0" text="Compilers" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
@@ -58,12 +57,12 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                <children>
-                  <Label text="Label">
+                  <Label text="AI">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefWidth="200.0" text="Button" textAlignment="CENTER">
+                  <Button fx:id="AI" alignment="CENTER" mnemonicParsing="false" onAction="#GotoCourse" prefWidth="200.0" text="AI" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
@@ -72,12 +71,12 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Label text="Label">
+                  <Label text="Control">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefWidth="200.0" text="Button" textAlignment="CENTER">
+                  <Button fx:id="CTRl" alignment="CENTER" mnemonicParsing="false" onAction="#GotoCourse" prefWidth="200.0" text="Control" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
@@ -86,12 +85,12 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
                <children>
-                  <Label text="Label">
+                  <Label text="Algorithms">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefWidth="200.0" text="Button" textAlignment="CENTER">
+                  <Button fx:id="Algo" alignment="CENTER" mnemonicParsing="false" onAction="#GotoCourse" prefWidth="200.0" text="Algorithms" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
@@ -100,12 +99,12 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Label text="Label">
+                  <Label text="Testing">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefWidth="200.0" text="Button" textAlignment="CENTER">
+                  <Button fx:id="TST" alignment="CENTER" mnemonicParsing="false" onAction="#GotoCourse" prefWidth="200.0" text="Testing" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>

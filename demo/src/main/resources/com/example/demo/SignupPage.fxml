@@ -41,12 +41,12 @@
                   <Insets left="50.0" right="50.0" top="20.0" />
                </VBox.margin>
             </TextField>
-            <Label text="ID">
+            <Label text="Name">
                <VBox.margin>
                   <Insets left="50.0" right="50.0" top="30.0" />
                </VBox.margin>
             </Label>
-            <TextField fx:id="ID" promptText="ID">
+            <TextField fx:id="Name" promptText="Name">
                <VBox.margin>
                   <Insets left="50.0" right="50.0" top="20.0" />
                </VBox.margin>
