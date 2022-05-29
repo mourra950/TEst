@@ -65,7 +65,7 @@ public class StudentPage {
         }
         FXMLLoader fxmlLoader = new FXMLLoader(StudentPage.class.getResource("CoursesStudent.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = new Stage();
+        Stage stage = (Stage) DB.getScene().getWindow();
         stage.setTitle("Sign Up");
         stage.setScene(scene);
         stage.show();

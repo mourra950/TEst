@@ -34,7 +34,7 @@ public class LoginPage {
 
         FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getResource("SignupPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = new Stage();
+        Stage stage = (Stage) Email.getScene().getWindow();
         stage.setTitle("Sign Up");
         stage.setScene(scene);
         stage.show();
@@ -62,9 +62,9 @@ public class LoginPage {
                 if(found)
                 {
                     if(admin!="true") {
-                    FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getResource("StudentPage.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getResource("TeacherMainPage.fxml"));
                     Scene scene = new Scene(fxmlLoader.load());
-                    Stage stage = new Stage();
+                    Stage stage = (Stage) Email.getScene().getWindow();
                     stage.setTitle("Login");
                     stage.setScene(scene);
                     stage.show();
@@ -72,7 +72,7 @@ public class LoginPage {
                     else {
                         FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getResource("StudentPage.fxml"));
                         Scene scene = new Scene(fxmlLoader.load());
-                        Stage stage = new Stage();
+                        Stage stage = (Stage) Email.getScene().getWindow();
                         stage.setTitle("Login");
                         stage.setScene(scene);
                         stage.show();
