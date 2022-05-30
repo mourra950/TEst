@@ -225,11 +225,6 @@
    <top>
       <HBox alignment="CENTER" prefHeight="30.0" prefWidth="600.0" style="-fx-spacing: 350; -fx-background-color: #FF5F5D;" BorderPane.alignment="TOP_CENTER">
          <children>
-            <Label fx:id="CourseCode" text="Course Code" textFill="#fff7e6">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </Label>
             <Label fx:id="CourseName" text="Course name" textFill="#fff7e6">
                <HBox.margin>
                   <Insets />

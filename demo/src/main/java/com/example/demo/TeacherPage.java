@@ -105,10 +105,9 @@ public class TeacherPage {
 
 
     }
- String temppp="DB";
     @FXML
     void UploadDes(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE 'main'.'Description' SET 'Description' ='" + DescriptionLabel.getText() + "' WHERE (`Name` == '" + LoginPage.CourseName + "');";
+        String sql = "UPDATE 'main'.'Description' SET 'Description' ='" + DesField.getText() + "' WHERE (`Name` == '" + LoginPage.CourseName + "');";
         test_db.UpdateData(sql);
     }
 
@@ -221,7 +220,10 @@ public class TeacherPage {
     }
 
     @FXML
-    void initialize() {
+    void initialize() throws SQLException, ClassNotFoundException {
+
+    DescriptionLabel.setText(getLink("Description",LoginPage.CourseName));
+    CourseName.setText(LoginPage.CourseName);
 
 
     }
@@ -233,7 +235,7 @@ public class TeacherPage {
         ResultSet rs = null;
         String temp = null;
         String ctemp="DB";
-        String sql = "SELECT * FROM 'main'.'" + b + "' WHERE Name = '" + ctemp + "'";
+        String sql = "SELECT * FROM 'main'.'" + b + "' WHERE Name = '" + LoginPage.CourseName + "'";
         ps = con.prepareStatement(sql);
         rs = ps.executeQuery();
         while (rs.next()) {
