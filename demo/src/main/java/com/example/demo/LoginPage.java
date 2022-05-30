@@ -14,6 +14,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class LoginPage {
 
@@ -28,7 +29,7 @@ public class LoginPage {
 
     @FXML
     private TextField Email;
-    public static String CourseName= "DB";
+    public static String CourseName = "DB";
 
     public void GotoSignUpPage(ActionEvent actionEvent) throws IOException {
 
@@ -42,48 +43,49 @@ public class LoginPage {
 
     public void SignInTheUser(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         String admin = "false";
-        boolean found =false;
+        boolean found = false;
 
         if (!Email.getText().isEmpty() && !Password.getText().isEmpty()) {
             try {
-                Connection con =DBconnector.connect();
+                Connection con = DBconnector.connect();
                 PreparedStatement ps = null;
                 ResultSet rs = null;
 
-                String sql = "SELECT * FROM 'main'.'Users' WHERE email = '"+Email.getText()+"' AND password = '"+Password.getText()+"' ;";
+                String sql = "SELECT * FROM 'main'.'Users' WHERE email = '" + Email.getText() + "' AND password = '" + Password.getText() + "' ;";
                 ps = con.prepareStatement(sql);
                 rs = ps.executeQuery();
-                while (rs.next())
-                {   admin= rs.getString("admin");
-                    CourseName=rs.getString("Course");
+                while (rs.next()) {
+                    admin = rs.getString("admin");
+                    CourseName = rs.getString("Course");
 
-                    found=true;
+                    found = true;
                 }
-                if(found)
-                {
-                    if(admin!="true") {
-                    FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getResource("TeacherMainPage.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load());
-                    Stage stage = (Stage) Email.getScene().getWindow();
-                    stage.setTitle("Login");
-                    stage.setScene(scene);
-                    stage.show();
-                    }
-                    else {
+                if (found) {
+                    System.out.println(admin);
+                    if (!Objects.equals(admin, "true")) {
+                        System.out.println(admin == "true");
                         FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getResource("StudentPage.fxml"));
+                        Scene scene = new Scene(fxmlLoader.load());
+
+                        Stage stage = (Stage) Email.getScene().getWindow();
+                        stage.setTitle("Login");
+                        stage.setScene(scene);
+                        stage.show();
+                    } else {
+                        System.out.println(admin);
+                        FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getResource("TeacherMainPage.fxml"));
                         Scene scene = new Scene(fxmlLoader.load());
                         Stage stage = (Stage) Email.getScene().getWindow();
                         stage.setTitle("Login");
                         stage.setScene(scene);
                         stage.show();
                     }
-                }
-                else {
-                    Alertbox.display("Not found","Login credits are not found");
+                } else {
+                    Alertbox.display("Not found", "Login credits are not found");
                 }
 
             } catch (Exception e) {
-               Alertbox.display("Sql error","check SQl");
+                Alertbox.display("Sql error", "check SQl");
             }
         } else {
             Alertbox.display("error", "please fill in the blanks");
