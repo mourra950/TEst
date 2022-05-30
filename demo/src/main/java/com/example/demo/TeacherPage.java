@@ -222,7 +222,7 @@ public class TeacherPage {
     @FXML
     void initialize() throws SQLException, ClassNotFoundException {
 
-    DescriptionLabel.setText(getLink("Description",LoginPage.CourseName));
+//    DescriptionLabel.setText(getLink("Description",LoginPage.CourseName));
     CourseName.setText(LoginPage.CourseName);
 
 
@@ -234,7 +234,6 @@ public class TeacherPage {
         PreparedStatement ps = null;
         ResultSet rs = null;
         String temp = null;
-        String ctemp="DB";
         String sql = "SELECT * FROM 'main'.'" + b + "' WHERE Name = '" + LoginPage.CourseName + "'";
         ps = con.prepareStatement(sql);
         rs = ps.executeQuery();

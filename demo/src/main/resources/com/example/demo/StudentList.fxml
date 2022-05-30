@@ -9,10 +9,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="720.0" style="-fx-background-color: #FFD7B6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.StudentList">
    <children>
-      <TableView layoutX="340.0" layoutY="22.0" prefHeight="406.0" prefWidth="358.0" style="-fx-background-color: #DB8E78;">
+      <TableView fx:id="table" layoutX="340.0" layoutY="22.0" prefHeight="406.0" prefWidth="358.0" style="-fx-background-color: #DB8E78;">
         <columns>
-          <TableColumn prefWidth="179.0" text="Name" />
-            <TableColumn prefWidth="178.0" text="ID" />
+          <TableColumn fx:id="name" prefWidth="179.0" text="Name" />
+            <TableColumn fx:id="id" prefWidth="178.0" text="ID" />
         </columns>
       </TableView>
       <TextField fx:id="nameField" layoutX="79.0" layoutY="201.0" />

@@ -28,7 +28,7 @@ public class LoginPage {
 
     @FXML
     private TextField Email;
-    public static String CourseName;
+    public static String CourseName= "DB";
 
     public void GotoSignUpPage(ActionEvent actionEvent) throws IOException {
 
