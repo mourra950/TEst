@@ -117,11 +117,14 @@ public class CoursesStudent {
     }
     public String getLink(String b, String c) throws SQLException, ClassNotFoundException {
         //b anhy table , c anhy column
+        System.out.println(b);
+        System.out.println(c);
         Connection con = DBconnector.connect();
         PreparedStatement ps = null;
         ResultSet rs = null;
         String temp = null;
-        String sql = "SELECT * FROM 'main'.'" + b + "' WHERE Name = '" + LoginPage.CourseName + "'";
+        String sql = "SELECT * FROM 'main'.'" + b + "' WHERE Name = '" + StudentPage.course + "'";
+        System.out.println(sql);
         ps = con.prepareStatement(sql);
         rs = ps.executeQuery();
         while (rs.next()) {

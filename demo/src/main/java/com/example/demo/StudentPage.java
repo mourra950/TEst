@@ -16,6 +16,7 @@ import java.sql.SQLException;
 
 public class StudentPage {
     public static String description;
+    public static String course;
     public static String courseCode;
     public static String courseName;
 
@@ -67,10 +68,12 @@ public class StudentPage {
 
     }
 
-    void setPage( String code, String name,String course) throws SQLException, ClassNotFoundException {
-        description = getLink("Description",course);
+    void setPage( String code, String name,String courset) throws SQLException, ClassNotFoundException {
+        description = getLink("Description",courset);
         courseCode = code;
         courseName = name;
+
+        course=courset;
     }
 
     public String getLink(String b, String c) throws SQLException, ClassNotFoundException {
@@ -83,7 +86,7 @@ public class StudentPage {
         ps = con.prepareStatement(sql);
         rs = ps.executeQuery();
         while (rs.next()) {
-            temp = rs.getString(c);
+            temp = rs.getString(2);
 
         }
         return temp;
