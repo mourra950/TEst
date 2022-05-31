@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39272bf7-70c8-451f-9d0b-32a94173962d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Browser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/TeacherPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/TeacherPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/example/demo/TeacherPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/example/demo/TeacherPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +32,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="29osd9bwihCbpFmaeAb6imxVtMe" />
   <component name="ProjectLevelVcsManager">
