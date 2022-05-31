@@ -59,6 +59,5 @@ public class SignupPage {
         {
             Alertbox.display("SQl Error","the email already exists");
         }
-
     }
 }

@@ -4,6 +4,7 @@ module com.example.demo {
     requires java.sql;
     requires org.xerial.sqlitejdbc;
     requires java.desktop;
+    requires org.junit.jupiter.api;
 
 
     opens com.example.demo to javafx.fxml;
