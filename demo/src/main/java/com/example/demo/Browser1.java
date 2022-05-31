@@ -3,21 +3,18 @@ package com.example.demo;
 import java.net.URI;
 
 public class Browser1
+
 {
+
+    String url_arr [] = {"https://www.google.com" , "www.youtube.com"};
     public String open(String url) {
-        System.out.println(url);
-        try {
-            URI u = new URI(url);
-            java.awt.Desktop.getDesktop().browse(u);
-            return "valid link";
-        }
 
-        catch (Exception e)
-        {
-            Alertbox.display("Invalid link","please report to the admin or the Doctor of the course");
+        for (int i = 0; i < url_arr.length; i++) {
+            if (url.equals(url_arr[i]))
+                return "valid link";
 
-        }
-        return "Invalid link";
+
+        } return "Invalid link";
     }
 
 }

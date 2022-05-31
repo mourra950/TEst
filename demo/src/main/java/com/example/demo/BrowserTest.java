@@ -11,7 +11,7 @@ class BrowserTest {
     {
         Browser1 b = new Browser1();
         String url_arr [] = {"https://www.google.com" , "ahmed.com"};
-        assertEquals("Invalid link",b.open(url_arr[1]));
+        assertEquals("Invalid link",b.open("ahmed.com"));
     }
 
 
