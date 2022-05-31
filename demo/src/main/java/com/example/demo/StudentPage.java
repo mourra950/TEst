@@ -40,22 +40,22 @@ public class StudentPage {
     @FXML
     void GotoCourse(ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
         if (event.getSource() == DB) {
-            setPage("CSE_333", "DataBase");
+            setPage("CSE_333", "DataBase","DB");
         }
         if (event.getSource() == AI) {
-            setPage( "CSE472", "Artificial intellegence");
+            setPage( "CSE472", "Artificial intellegence","AI");
         }
         if (event.getSource() == CP) {
-            setPage( "CSE 439", "Design of Compilers");
+            setPage( "CSE 439", "Design of Compilers","CP");
         }
         if (event.getSource() == CTRl) {
-            setPage( "CSE371", "Control Enginnerring");
+            setPage( "CSE371", "Control Enginnerring","CTRL");
         }
         if (event.getSource() == Algo) {
-            setPage("CSE332", "Design of Algorithms");
+            setPage("CSE332", "Design of Algorithms","ALGO");
         }
         if (event.getSource() == TST) {
-            setPage( "CSE 338", "Software Testing");
+            setPage( "CSE 338", "Software Testing","TST");
         }
         FXMLLoader fxmlLoader = new FXMLLoader(StudentPage.class.getResource("CoursesStudent.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
@@ -67,8 +67,8 @@ public class StudentPage {
 
     }
 
-    void setPage( String code, String name) throws SQLException, ClassNotFoundException {
-        description = getLink("Description",name);
+    void setPage( String code, String name,String course) throws SQLException, ClassNotFoundException {
+        description = getLink("Description",course);
         courseCode = code;
         courseName = name;
     }
@@ -79,14 +79,13 @@ public class StudentPage {
         PreparedStatement ps = null;
         ResultSet rs = null;
         String temp = null;
-        String sql = "SELECT * FROM 'main'.'" + b + "' WHERE Name = '" + LoginPage.CourseName + "'";
+        String sql = "SELECT * FROM 'main'.'" + b + "' WHERE Name = '" + c+ "'";
         ps = con.prepareStatement(sql);
         rs = ps.executeQuery();
         while (rs.next()) {
             temp = rs.getString(c);
 
         }
-        System.out.println(temp);
         return temp;
     }
 
