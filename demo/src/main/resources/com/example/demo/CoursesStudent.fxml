@@ -39,17 +39,17 @@
             <content>
                   <VBox alignment="CENTER" style="-fx-background-color: #FFD9BA;">
                      <children>
-                        <Button fx:id="L1" mnemonicParsing="false" text="Lecture 1">
+                        <Button mnemonicParsing="false" onAction="#OL1" text="Lecture 1">
                            <VBox.margin>
                               <Insets bottom="30.0" top="30.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="L2" mnemonicParsing="false" text="Lecture 2">
+                        <Button fx:id="L2" mnemonicParsing="false" onAction="#OL2" text="Lecture 2">
                            <VBox.margin>
                               <Insets bottom="30.0" top="30.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="L3" mnemonicParsing="false" text="Lecture 3">
+                        <Button fx:id="L3" mnemonicParsing="false" onAction="#OL3" text="Lecture 3">
                            <VBox.margin>
                               <Insets bottom="30.0" top="30.0" />
                            </VBox.margin>
@@ -61,17 +61,17 @@
               <content>
                   <VBox alignment="CENTER" style="-fx-background-color: #FFD9BA;">
                      <children>
-                        <Button mnemonicParsing="false" text="Assigment 1">
+                        <Button mnemonicParsing="false" onAction="#OA1" text="Assigment 1">
                            <VBox.margin>
                               <Insets bottom="30.0" top="30.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Assigment 2">
+                        <Button mnemonicParsing="false" onAction="#OA2" text="Assigment 2">
                            <VBox.margin>
                               <Insets bottom="30.0" top="30.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Assigment 3">
+                        <Button mnemonicParsing="false" onAction="#OA3" text="Assigment 3">
                            <VBox.margin>
                               <Insets bottom="30.0" top="30.0" />
                            </VBox.margin>
@@ -83,17 +83,17 @@
               <content>
                   <VBox alignment="CENTER" style="-fx-background-color: #FFD9BA;">
                      <children>
-                        <Button mnemonicParsing="false" text="Quiz 1">
+                        <Button mnemonicParsing="false" onAction="#OQ1" text="Quiz 1">
                            <VBox.margin>
                               <Insets bottom="30.0" top="30.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Quiz 2">
+                        <Button mnemonicParsing="false" onAction="#OQ2" text="Quiz 2">
                            <VBox.margin>
                               <Insets bottom="30.0" top="30.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Quiz 3">
+                        <Button mnemonicParsing="false" onAction="#OQ3" text="Quiz 3">
                            <VBox.margin>
                               <Insets bottom="30.0" top="30.0" />
                            </VBox.margin>
