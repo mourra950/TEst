@@ -1,10 +1,13 @@
 package com.example.demo;
 
+import com.example.demo.Browser1;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-class BrowserTest {
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.fail;
+public class BrowserTest extends TestCase {
 
     @Test
     public void browser1()

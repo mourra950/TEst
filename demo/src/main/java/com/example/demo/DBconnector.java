@@ -6,7 +6,7 @@ public class DBconnector {
     public static Connection connect() throws SQLException, ClassNotFoundException {
         Connection con = null;
 
-        String url = "jdbc:sqlite:src/main/DB/lms.db";
+        String url = "jdbc:sqlite:demo/src/main/DB/lms.db";
         Class.forName("org.sqlite.JDBC");
         con = DriverManager.getConnection(url); //connecting to our database
         System.out.println("Connected!");
@@ -18,7 +18,7 @@ public class DBconnector {
         Connection conn = null;
 
 
-        String url = "jdbc:sqlite:src/main/DB/lms.db";
+        String url = "jdbc:sqlite:demo/src/main/DB/lms.db";
         conn = DriverManager.getConnection(url);
         Statement s = conn.createStatement();
 

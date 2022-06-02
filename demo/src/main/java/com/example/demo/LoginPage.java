@@ -60,6 +60,7 @@ public class LoginPage {
 
                     found = true;
                 }
+
                 if (found) {
                     System.out.println(admin);
                     if (!Objects.equals(admin, "true")) {
@@ -85,7 +86,7 @@ public class LoginPage {
                 }
 
             } catch (Exception e) {
-                Alertbox.display("Sql error", "check SQl");
+                System.out.println(e);
             }
         } else {
             Alertbox.display("error", "please fill in the blanks");
